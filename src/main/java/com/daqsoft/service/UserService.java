@@ -31,7 +31,6 @@ public class UserService {
                 if (!StringUtils.isEmpty(name)) {
                     predicateList.add(criteriaBuilder.like(root.get("name"), "%" + name + "%"));
                 }
-                predicateList.add(criteriaBuilder.or(criteriaBuilder.equal(root.get("name"), "1"), criteriaBuilder.equal(root.get("name"), "1")));
                 criteriaQuery.where(predicateList.toArray(new Predicate[predicateList.size()]));
                 return null;
             }
